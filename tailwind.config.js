@@ -17,6 +17,9 @@ module.exports = {
         lightbeige: "#E4DBCF",
         chocbrown: "#A27C62",
       },
+      fontFamily: {
+        roboto: "'Roboto', sans-serif",
+      },
     },
   },
   plugins: [],
