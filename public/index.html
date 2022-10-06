@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 
 
@@ -29,7 +32,7 @@
     <nav class="border-darkbrown px-2 sm:px-4 py-2.5 rounded">
       <div class="container flex flex-wrap justify-between items-center mx-auto">
         <div class="text-l font-semibold">
-          <a href="#" class="uppercase font-bold md:text-2xl text-sandbrown sm:text-2xl font-roboto font-bold tracking-widest">Mahdollisuuksien Maisemia</a>
+          <a href="#" class="uppercase md:text-2xl text-sandbrown sm:text-2xl font-roboto font-bold tracking-widest">Mahdollisuuksien Maisemia</a>
         </div>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm md:hidden" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
@@ -56,7 +59,7 @@
     <div class="w-full bg-cover bg-center md:h-[35rem] h-[15rem]" style="background-image: url(../dist/img/header.png);">
         <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
             <div class="text-center m-auto h-fit">
-                <h1 class="sm:text-2xl uppercase md:text-4xl text-sandbrown font-roboto font-bold tracking-widest text-center w-3/4 m-auto">Luovuus sinun työssäsi? Mitä luovuus työelämässä mahdollistaa?</h1>
+                <h1 class="sm:text-2xl uppercase md:text-4xl text-sandbrown font-josefin font-bold tracking-widest text-center w-3/4 m-auto">Luovuus sinun työssäsi? Mitä luovuus työelämässä mahdollistaa?</h1>
             </div>
         </div>
     </div>
@@ -138,7 +141,7 @@
         <br/>
         <br/>
         <div class="grid place-items-center">
-            <input type="text" id="username" placeholder="Käyttäjätunnus" class="block mx-4 p-2.5 text-sm bg-neutral-300 rounded-lg border-1 font-roboto tracking-widest"> 
+            <input type="text" autocomplete="off" id="username" placeholder="Käyttäjätunnus" class="block mx-4 p-2.5 text-sm bg-neutral-300 rounded-lg border-1 font-roboto tracking-widest"> 
             <br/>
             <br/>
             <button type="submit" class="text-black font-bold py-2 px-4 rounded-md font-roboto tracking-widest" style="background-color: #E4DBCF; border: solid 2px #733D1E;">Liity</button>
@@ -150,13 +153,13 @@
         <h1 id="roomName" class="text-center pb-5 pt-3 text-xl"></h1>
         <div class="flex items-center py-2 px-3 bg-sandbrown rounded-lg md:w-3/4 m-auto border-2 border-darkbrown">
            
-            <input type="text" id="message" placeholder="Lähetä viesti" class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-neutral-300 rounded-lg font-roboto"> 
+            <input type="text" autocomplete="off" id="message" placeholder="Lähetä viesti" class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-neutral-300 rounded-lg font-roboto"> 
             <button type="submit" class="inline-flex justify-center p-2 rounded-md cursor-pointer hover:bg-lightbeige">
             <svg class="w-8 h-8 rotate-90 fill-darkbrown" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
             </button>
         </div>
     </form>
-    <ul id="messages"></ul>
+    <ul class="bg-lightbeige mt-6 max-h-[40rem] overflow-y-auto border-2 border-darkbrown empty:border-0" id="messages"></ul>
     <div class="p-2 flex justify-center mt-4">
         <Button id="log-out" color='gray.500' fontSize='sm' class="bg-sandbrown rounded-md text-black font-bold py-2 px-4 font-roboto tracking-widest border-2 border-darkbrown">Takaisin</Button>
     </div>  

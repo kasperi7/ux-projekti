@@ -27,7 +27,7 @@ document.querySelector("#join").addEventListener("submit", (event) => {
 
 socket.on("chat message", (msg, username) => {
   const item = document.createElement("li");
-  item.classList.add("bg-lightbeige", "p-3", "text-black", "w-fit", "m-5");
+  item.classList.add("bg-sandbrown", "p-3", "text-black", "w-fit", "m-5");
   item.innerHTML = `<b> ${username}: </b>` + msg;
   document.getElementById("messages").appendChild(item);
 });
