@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="/socket.io/socket.io.js"></script>
     <script defer src="chat.js"></script>
+    <script defer src="timer.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css"
@@ -181,9 +182,39 @@
         <h1 class="my-3 text-xl font-roboto font-bold tracking-widest m-auto">
           Katso tapahtumaa suorana
         </h1>
+        <div
+          id="clockdiv"
+          class="text-white inline-block text-center text-3xl font-thin"
+        >
+          <div class="p-3 rounded bg-gray-400 inline-block w-24 mt-2">
+            <span
+              class="days p-4 rounded-sm bg-slate-600 inline-block w-16"
+            ></span>
+
+            <div class="smalltext">Päivää</div>
+          </div>
+          <div class="p-3 rounded bg-gray-400 inline-block w-24 mt-2">
+            <span
+              class="hours p-4 rounded-sm bg-slate-600 inline-block w-16"
+            ></span>
+            <div class="smalltext">Tuntia</div>
+          </div>
+          <div class="p-3 rounded bg-gray-400 inline-block w-24 mt-2">
+            <span
+              class="minutes p-4 rounded-sm bg-slate-600 inline-block w-16"
+            ></span>
+            <div class="smalltext">Minuuttia</div>
+          </div>
+          <div class="p-3 rounded bg-gray-400 inline-block w-24 mt-2">
+            <span
+              class="seconds p-4 rounded-sm bg-slate-600 inline-block w-16"
+            ></span>
+            <div class="smalltext">Sekuntia</div>
+          </div>
+        </div>
         <video
           id="my-video"
-          class="video-js vjs-kasperi vjs-theme-forest md:mb-6"
+          class="video-js vjs-kasperi vjs-theme-forest md:mb-6 mt-8"
         >
           <source src="/dist/img/stream.mp4" type="video/mp4" />
           <p class="vjs-no-js">
