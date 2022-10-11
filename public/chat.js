@@ -13,16 +13,16 @@ document.querySelector("#msg-input").addEventListener("submit", (event) => {
 });
 
 document.querySelector("#join").addEventListener("submit", (event) => {
-  event.preventDefault();
   const username = document.getElementById("username");
   const room = document.querySelector('input[name="room"]:checked').value;
   socket.emit("join", username.value, room);
   username.value = "";
-  document.querySelector("#join").style.display = "";
-  document.querySelector("#msg-input").style.display = "";
-  document.querySelector("#log-out").style.display = "";
-  document.querySelector("#messages").style.display = "";
+  document.querySelector("#join").style.display = "none";
+  document.querySelector("#chat-room").style.display = "block";
+  document.querySelector("#msg-input").style.display = "block";
+  document.querySelector("#log-out").style.display = "block";
   roomName.innerHTML = "Liityit huoneeseen " + room;
+  event.preventDefault();
 });
 
 socket.on("chat message", (msg, username) => {
@@ -35,8 +35,11 @@ socket.on("chat message", (msg, username) => {
 document.querySelector("#log-out").addEventListener("click", (event) => {
   event.preventDefault();
   socket.emit("leave");
+  document.querySelector("#join").style.display = "block";
+  document.querySelector("#msg-input").style.display = "none";
+  document.querySelector("#log-out").style.display = "none";
+  document.querySelector("#chat-room").style.display = "none";
   messages.innerHTML = "";
-  location.reload();
   return false;
 });
 
