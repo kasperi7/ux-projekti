@@ -16,10 +16,19 @@ module.exports = {
         graybrown: "#AD948F",
         lightbeige: "#E4DBCF",
         chocbrown: "#A27C62",
+        jokuvari: "#9965b5",
       },
       fontFamily: {
         roboto: "'Roboto', sans-serif",
         josefin: "'Josefin Sans', sans-serif",
+      },
+      height: {
+        128: "32rem",
+        140: "40rem",
+      },
+      width: {
+        128: "32rem",
+        140: "40rem",
       },
     },
   },

@@ -29,9 +29,23 @@ socket.on("chat message", (msg, username) => {
   const item = document.createElement("li");
   item.classList.add("bg-sandbrown", "p-3", "text-black", "w-fit", "m-5");
   item.innerHTML = `<b> ${username}: </b>` + msg;
-  document.getElementById("messages").appendChild(item);
-});
 
+  messages.appendChild(item);
+  autoScroll();
+});
+const autoScroll = () => {
+  const messages = document.getElementById("messages");
+  const newMessage = messages.lastElementChild;
+  const newMessageStyles = getComputedStyle(newMessage);
+  const newMessageMargin = parseInt(newMessageStyles.marginBottom);
+  const newMessageHeight = newMessage.offsetHeight + newMessageMargin;
+  const visibleHeight = messages.offsetHeight;
+  const containerHeight = messages.scrollHeight;
+  const scrollOffset = messages.scrollTop + visibleHeight;
+  if (containerHeight - newMessageHeight <= scrollOffset) {
+    messages.scrollTop = messages.scrollHeight;
+  }
+};
 document.querySelector("#log-out").addEventListener("click", (event) => {
   event.preventDefault();
   socket.emit("leave");

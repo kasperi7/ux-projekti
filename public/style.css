@@ -1,0 +1,10 @@
+.nav-active {
+    background-color: #733D1E;
+    border-radius: 5px;
+    color: white;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+}
