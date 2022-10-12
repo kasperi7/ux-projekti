@@ -60,3 +60,31 @@ document.querySelector("#log-out").addEventListener("click", (event) => {
 socket.on("response", (msg) => {
   console.log(msg);
 });
+
+const closeChatButton = document.getElementById("close-chat");
+const openChatButton = document.getElementById("open-chat");
+const closeChatButton2 = document.getElementById("close-chat2");
+const chatSection = document.getElementById("chat-section");
+let isChatOpen = true;
+
+closeChatButton.addEventListener("click", (e) => {
+  toggleChat();
+});
+
+openChatButton.addEventListener("click", (e) => {
+  toggleChat();
+});
+closeChatButton2.addEventListener("click", (e) => {
+  toggleChat();
+});
+const toggleChat = () => {
+  if (isChatOpen) {
+    chatSection.classList.add("hidden");
+    openChatButton.classList.remove("hidden");
+    isChatOpen = false;
+  } else {
+    chatSection.classList.remove("hidden");
+    openChatButton.classList.add("hidden");
+    isChatOpen = true;
+  }
+};
